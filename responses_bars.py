@@ -9,6 +9,7 @@ pd.set_option('display.max_colwidth', None)
 pd.set_option('display.width', None)
 random.seed(1)
 
+dataset_path = os.path.join("data", "AACEmotionRepresentation.xlsx")
 
 def plot_single_chart(series: pd.Series, title: str, xlabel: str, ylabel: str):
     choice_counts = series.astype(int)
@@ -53,7 +54,6 @@ def plot_choice_counts(data: pd.DataFrame, which_data: str):
     return choice_counts.sort_index()
 
 
-dataset_path = os.path.join("data", "AACEmotionRepresentation_2.xlsx")
 dataset = pd.read_excel(dataset_path)
 
 # ========== #
